@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <a class="navbar-brand" href="#">gCamp</a>
+  </nav>
 
 <%= yield %>
+</div>
+<div class="container">
+<footer>
+  <hr>
+  <%= link_to 'About', about_path%>
+  |
+  <%= link_to 'Terms', terms_path%>
+  <%= link_to image_tag("github.png", class: "img-responsive"), "https://github.com/petercardi", class: "social_media" @media screen and (orientation: portrait) {
+  img.ri { max-width: 90%; }
+} %>
+  <%= link_to image_tag("linkedin.png", class: "img-responsive"), "https://linkedin.com", class: "social_media"%>
+  <%= link_to image_tag("twitter.png", class: "img-responsive"), "https://twitter.com", class: "social_media"%>
+  <%= link_to image_tag("galvanize.png", class: "img-responsive"), "https://github.com/petercardi", class: "social_media"%>
+</footer>
+</div>
 
 </body>
 </html>
