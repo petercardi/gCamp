@@ -45,5 +45,10 @@
           </div>
           </div>
           </div>
+  <% @plugs.each do |key, value| %>
+    <p><%= key %></p>
+    <p class = "text-muted"><em><%= value %></em></p>
+  <% end %>
+
 
         </div>
