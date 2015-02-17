@@ -3,11 +3,11 @@
 <h1 id=top>Frequently Asked Questions</h1></div>
 
 <ul><% @questions.each do |q, a| %>
-  <li><%= link_to "#{q}", "##{q}" %></li>
+  <li><%= link_to "#{q}", "##{q.parameterize}" %></li>
 <% end %></ul>
 
 <% @questions.each do |q, a| %>
-  <p><h3 id="<%= q %>"><%= q %></h3></p><br>
+  <p><h3 id="<%= q.parameterize %>"><%= q %></h3></p><br>
   <p><%= a %></p>
   <%= link_to "Top", "#top" %>
 <% end %>
