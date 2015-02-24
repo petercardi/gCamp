@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Projects</h1>
+
+  <% @projects.each do |project| %>
+    <%= project.name %>
+    <%= link_to "Show Project", project_path(@project) %>
+    <%= link_to "Edit Project", edit_project_path(@project) %><hr>
+  <% end %>
+
+  <%= link_to "New Project", new_project_path %>
+
+</div>
