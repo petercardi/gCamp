@@ -3,4 +3,3 @@ class RemoveNameFromUsers < ActiveRecord::Migration
     remove_column :users, :name, :string
   end
 end
-0
