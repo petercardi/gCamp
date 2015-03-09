@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  # attr_accessible :first_name, :last_name
+
   def index
     @users = User.all
   end

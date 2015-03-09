@@ -2,11 +2,11 @@
   <h1>Projects</h1>
 
   <% @projects.each do |project| %>
-    <%= project.name %>
-    <%= link_to "Show Project", project_path(project) %>
-    <%= link_to "Edit Project", edit_project_path(project) %><hr>
+    <%= link_to project.name, project_path(project) %>
+    <%= link_to "Edit Project", edit_project_path(project), class: "btn btn-info" %>
+    <%= link_to "Destroy", project_path(project), method: :delete, data: {confirm: "Are you suuuure?"}, class: "btn btn-danger" %><hr>
   <% end %>
 
-  <%= link_to "New Project", new_project_path %>
+  <%= link_to "New Project", new_project_path, class: 'btn btn-info' %>
 
 </div>
