@@ -1,7 +1,6 @@
 <div class="container">
 
-  <%= form_for (@user, html: {class: 'form-horizontal'}) do |f| %>
-  <% if @task.errors.any? %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
       <ul>
@@ -11,21 +10,18 @@
     </ul>
     </div>
   <% end %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    <%= f.submit %>
+
+  <%= form_for(@user, html: { class: 'form-horizontal' }) do |user| %>
+    <%= user.label :first_name %>
+    <%= user.text_field :first_name %>
+    <%= user.label :last_name %>
+    <%= user.text_field :last_name %>
+    <%= user.label :email %>
+    <%= user.email_field :email %>
+    <%= user.submit %>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :first_name, class: "col-sm-2 control-label" %>
-    <div class="col-sm-6">
-      <%= f.text_field :first_name, class: 'form-control' %>
 
-    </div>
 
   </div>
 

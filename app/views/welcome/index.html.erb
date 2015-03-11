@@ -1,36 +1,36 @@
 <div class="container">
 
-<div class="jumbotron">
-  <h1>gCamp</h1>
-  <p>Your life, organized.</p>
-</div>
+  <div class="jumbotron">
+    <h1>gCamp</h1>
+    <p>Your life, organized.</p>
+  </div>
 
-<div class="row">
-  <div class="col-md-4"><%=image_tag("1.jpg", class: "img-responsive")%>  </div>
-  <div class="col-md-4"><%=image_tag("2.jpg", class: "img-responsive")%></div>
-  <div class="col-md-4"><%=image_tag("3.jpg", class: "img-responsive")%></div>
-</div>
+  <div class="row">
+    <div class="col-md-4"><%=image_tag("1.jpg", class: "img-responsive")%></div>
+    <div class="col-md-4"><%=image_tag("2.jpg", class: "img-responsive")%></div>
+    <div class="col-md-4"><%=image_tag("3.jpg", class: "img-responsive")%></div>
+  </div>
 
-<p></p>
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="panel panel-primary">
-      <div class="panel-heading">Tasks
-      </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Tasks
+        </div>
         <div class="panel-body">
-        Grouped by projects and lists. Just the way you like 'em.
+          Grouped by projects and lists. Just the way you like 'em.
         </div>
-        </div>
-        </div>
-  <div class="col-md-4">
-    <div class="panel panel-primary">
-      <div class="panel-heading">Permissions
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          Permissions
+        </div>
         <div class="panel-body">
           Fine-grained permissions
-          </div>
-          </div>
+        </div>
+    </div>
           </div>
   <div class="col-md-4">
     <div class="panel panel-primary">
@@ -45,7 +45,6 @@
           </div>
           </div>
           </div>
-  <% @plugs = {'gCamp has changed my life!  It\'s the best tool I\'ve ever used.' => 'Cayla Hayes', 'Before gCamp I was a disorderly slob.  Now I\'m more organized than I\'ve ever been.' => 'Leta Jaskolski', 'Don\'t hesitate - sign up right now! You\'ll never be the same.' => 'Lavern Upton'} %>
   <% @plugs.each do |key, value| %>
     <p><%= key %></p>
     <p class = "text-muted"><em><%= value %></em></p>
