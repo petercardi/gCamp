@@ -1,14 +1,14 @@
 <div class="container">
 
-  <p id="notice"><%= notice %></p>
-  <div class="page-header">
-    <div class="pull-right">
+    <div class="page-header">
+      <div class="pull-right">
       <%= link_to "New Task", new_task_path, class: "btn btn-info" %>
     </div>
     <h1>Tasks</h1>
   </div>
 
   <table class="table">
+
     <thead>
       <tr>
         <th>Description</th>
@@ -29,6 +29,7 @@
         </tr>
       <% end %>
     </tbody>
+
   </table>
 
 </div>
