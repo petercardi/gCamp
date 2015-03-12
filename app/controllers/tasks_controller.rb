@@ -21,6 +21,7 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to tasks_path, notice: 'Task was successfully created.'
     else
+      flash[:error] = "Something went wrong"
       render :new
     end
 
@@ -49,5 +50,5 @@ private
   def task_params
     params.require(:task).permit(:description)
   end
-  
+
 end
