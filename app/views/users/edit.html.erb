@@ -2,9 +2,9 @@
 
   <div class="page-header">
     <div class="pull-right">
-      <%= link_to "Delete", @user, method: :delete, data: {confirm: "Are you suuuure?"} %>
+      <%= link_to "Delete", @user, method: :delete, data: {confirm: "Are you suuuure?"}, class: "btn btn-danger" %>
     </div>
-    <h1>Edit user profile</h1>
+    <h1>Edit profile for <%= @user.first_name + " " + @user.last_name %></h1>
   </div>
 
   <%= render 'form' %>
