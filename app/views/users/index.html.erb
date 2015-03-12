@@ -1,9 +1,5 @@
 <div class="container">
 
-  <% if notice %>
-    <%= notice %>
-  <% end %>
-
   <div class="page-header">
     <div class="pull-right">
       <%= link_to "Add User", new_user_path, class: "btn btn-info"%>
@@ -12,28 +8,30 @@
   </div>
 
   <table class="table">
+
     <thead>
       <tr>
         <th>Name</th>
         <th>Email</th>
-        <th>[oops]</th>
-        <th>[ooooops]</th>
+        <th></th>
       </tr>
     </thead>
 
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td><%= link_to "#{user.first_name} + #{user.last_name}", user_path(user) %></td>
+          <td><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></td>
           <td><%= mail_to user.email %></td>
-        <div class="pull-right">
-          <td><%= link_to "Edit", edit_user_path(user[:id]), class: 'btn btn-default' %></td>
-          <td><%= link_to "Delete", user_path(user[:id]), method: :delete, data: {confirm: "Are you suuure?"}, class: "btn btn-warning" %></td>
+          <td>
+            <div class="pull-right">
+              <%= link_to "Edit", edit_user_path(user[:id]), class: 'btn btn-default' %>
+              <%= link_to "Delete", user_path(user[:id]), method: :delete, data: {confirm: "Are you suuure?"}, class: "btn btn-warning" %>
+            </td>
         </div>
         </tr>
-        <% end %>
-      </div>
+      <% end %>
     </tbody>
+
   </table>
 
 </div>

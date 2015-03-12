@@ -1,10 +1,27 @@
 <div class="container">
 
-  <h1>User</h1>
+  <div class="page-header">
+    <div class="pull-right">
+      <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-info"%>
+      <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    </div>
+    <h1>Details for <%= @user.first_name + ' ' + @user.last_name %></h1>
+  </div>
 
-  <p>Name: <%= @user.first_name + ' ' + @user.last_name %> </p>
-  <p>Email: <%= @user.email %> </p>
-  <p>Joined at: <%= @user.created_at %> </p>
-  <p>Edited profile at: <%= @user.updated_at %> </p>
+  <dl class="dl-horizontal">
+    <dt>First name:</dt>
+    <dd><%= @user.first_name %></dd>
+    <dt>Last name:</dt>
+    <dd><%= @user.last_name %></dd>
+    <dt>Email:</dt>
+    <dd><%= @user.email %></dd>
+  </dl>
+
+
+  <ol class="breadcrumb">
+    <li><a href="/users">Users</a></li>
+    <li class="active"><%= @user.first_name + ' ' + @user.last_name %></li>
+  </ol>
+
 
 </div>
