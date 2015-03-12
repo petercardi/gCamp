@@ -15,6 +15,14 @@
       </div>
     </nav>
 
+    <div class="container">
+      <% if flash[:notice] %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% elsif flash[:error] %>
+        <div class="alert alert-error"><%= flash[:error] %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
 
     <div class="container">
