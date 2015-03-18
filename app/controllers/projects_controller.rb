@@ -11,8 +11,13 @@ class ProjectsController < ApplicationController
   def create
     project_params = params.require(:project).permit(:name)
     @project = Project.new(project_params)
-    @project.save
-    redirect_to projects_path, notice: "Project was successfully created"
+
+    if @project.save
+      redirect_to projects_path, notice: "Project was successfully created"
+    else
+      render :new
+    end
+    
   end
 
   def show
@@ -34,5 +39,11 @@ class ProjectsController < ApplicationController
     Project.find(params[:id]).destroy
     redirect_to projects_path, notice: "Project was successfully deleted"
   end
+
+  private
+
+    def project_params
+      params.require(:task).permit(:name)
+    end
 
 end
