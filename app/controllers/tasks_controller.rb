@@ -17,17 +17,16 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-
     if @task.save
       redirect_to tasks_path, notice: 'Task was successfully created.'
     else
       flash[:error] = "Something went wrong"
       render :new
     end
-
   end
 
   def update
+    @task = Task.find(params[:id])
     if @task.update(task_params)
       redirect_to tasks_path, notice: 'Task was successfully updated.'
     else
@@ -48,7 +47,7 @@ private
   end
 
   def task_params
-    params.require(:task).permit(:description)
+    params.require(:task).permit(:description, :completed)
   end
 
 end

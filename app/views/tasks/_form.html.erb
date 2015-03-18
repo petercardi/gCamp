@@ -23,6 +23,8 @@
     <div class="form-group">
       <div class="actions">
         <div class="col-sm-4 col-sm-offset-2">
+          <%= f.label :completed %>
+          <%= f.check_box :completed %>
           <%= f.submit class: "btn btn-primary"%>
           <%= link_to 'Cancel', tasks_path, class: "btn btn-default" %>
         </div>
