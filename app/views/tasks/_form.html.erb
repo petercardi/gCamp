@@ -9,7 +9,7 @@
           <% @task.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
-      </ul>
+        </ul>
       </div>
     <% end %>
 
@@ -17,6 +17,13 @@
       <%= f.label :description, class: "col-sm-2 control-label" %>
       <div class="col-sm-6">
         <%= f.text_field :description, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :due_date, class: "col-sm-2 control-label" %>
+      <div class="col-sm-6">
+        <%= f.date_field :due_date, class: "form-control" %>
       </div>
     </div>
 

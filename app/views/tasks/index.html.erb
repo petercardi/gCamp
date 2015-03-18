@@ -12,6 +12,7 @@
     <thead>
       <tr>
         <th>Description</th>
+        <th>Due on</th>
         <th class="pull-right">Completed?</th>
         <th></th>
       </tr>
@@ -21,6 +22,14 @@
       <% @tasks.each do |task| %>
         <tr>
           <td><%= link_to "#{task.description}", task_path(task) %></td>
+          <td><%= task.due_date %></td>
+          <td class="pull-right">
+            <% if task.completed %>
+              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <% else %>
+              <span class="glyphicon glyphicon-grain" aria-hidden="true"></span>
+            <% end %>
+          </td>
           <td>
             <div class="pull-right">
               <%= link_to 'Edit', edit_task_path(task), class: "btn btn-info" %>

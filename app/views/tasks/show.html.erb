@@ -3,9 +3,9 @@
   <div class="page-header">
     <div class="pull-right">
       <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-info"%>
-      <%= link_to 'Delete', @task, method: :delete, data: { confirm: 'Are you suuure?' }, class: "btn btn-danger" %>
     </div>
     <h1><%= @task.description %></h1>
+    <h2><%= @task.due_date %></h2>
   </div>
 
   <ol class="breadcrumb">

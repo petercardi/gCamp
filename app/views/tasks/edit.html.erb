@@ -7,6 +7,13 @@
     <h1>Edit task "<%= @task.description %>"</h1>
   </div>
 
+  <ol class="breadcrumb">
+    <li><a href="/tasks">Tasks</li>
+    <!-- <li><%= link_to task_path(@task) %>@task.description </li> -->
+    <li><%= link_to @task.description, @task %></li>
+    <li class="active">Edit</li>
+  </ol>
+
   <%= render 'form' %>
 
 </div>
